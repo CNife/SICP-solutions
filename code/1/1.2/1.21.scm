@@ -1,12 +1,5 @@
-# 练习 1.21
+#lang sicp
 
-使用 `smallest-divisor` 找出各数的最小因子：199，1999，19999。
-
----
-
-[1.21.scm](../../code/1/1.2/1.21.scm)
-
-```Scheme
 (define (smallest-divisor n)
   (find-divisor n 2))
 
@@ -21,4 +14,3 @@
 (smallest-divisor 199)   ; 199
 (smallest-divisor 1999)  ; 1999
 (smallest-divisor 19999) ; 19999
-```
