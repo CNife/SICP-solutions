@@ -1,12 +1,5 @@
-# 练习 1.18
+#lang sicp
 
-利用练习 1.16 和 1.17 的结果设计一个过程，它能产生一个基于加法、加倍和折半运算的迭代计算过程，只用对数的步数就能求出两个整数的乘积。
-
----
-
-[1.18.scm](../../code/1/1.2/1.18.scm)
-
-```Scheme
 (define (multiply a b)
 
   (define (multiply-iter a b prev-a)
@@ -27,4 +20,3 @@
       (multiply-iter b a 0)))
 
 (multiply 6 10) ; 60
-```
