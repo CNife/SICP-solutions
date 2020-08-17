@@ -1,12 +1,5 @@
-# 练习 1.11
+#lang sicp
 
-函数 `f` 由如下的规则定义：如果 `n < 3`，那么 `f(n) = n`；如果 `n >= 3`，那么 `f(n) = f(n-1) + 2f(n-2) + 3f(n-3)`。请写一个采用递归计算过程计算 `f` 的过程，再写一个采用迭代计算过程计算 `f` 的过程。
-
----
-
-[1.11.scm](../../code/1/1.2/1.11.scm)
-
-```Scheme
 ; 递归
 (define (f-recursion x)
   (if (< x 3)
@@ -26,4 +19,9 @@
                     (+ i 1)
                     x)))
   (f-iterator 2 1 0 0 x))
-```
+
+(= (f-recursion 10)
+   (f-iteration 10)) ; #t
+
+(= (f-recursion 1)
+   (f-iteration 1)) ; #t
